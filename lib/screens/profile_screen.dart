@@ -61,7 +61,9 @@ class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProvider
                     _currentUser!.uid,
                     {'displayName': _nameController.text.trim()},
                   );
-                  if (!context.mounted) return;
+                  if (!context.mounted) {
+                    return;
+                  }
                   Navigator.pop(context);
                 }
               },
@@ -146,10 +148,10 @@ class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProvider
                         OutlinedButton.icon(
                           onPressed: () async {
                             await FirebaseAuth.instance.signOut();
-                            if (!context.mounted) return;
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (context) => const AuthScreen()),
-                            );
+                            if (!context.mounted) {
+                              return;
+                            }
+                            Navigator.of(context).pushReplacementNamed('/');
                           },
                           icon: const Icon(Icons.logout, color: Colors.deepOrange),
                           label: const Text('Logout', style: TextStyle(color: Colors.deepOrange)),

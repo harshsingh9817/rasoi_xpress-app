@@ -175,7 +175,7 @@ class _AddEditAddressScreenState extends State<AddEditAddressScreen> {
               ),
               const SizedBox(height: 10),
               DropdownButtonFormField<String>(
-                initialValue: _selectedAddressType,
+                value: _selectedAddressType,
                 decoration: const InputDecoration(labelText: 'Address Type'),
                 items: <String>['Home', 'Work', 'Other'].map((String value) {
                   return DropdownMenuItem<String>(

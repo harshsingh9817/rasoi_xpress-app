@@ -72,19 +72,25 @@ void showResetPasswordModal({
                   onPressed: () async {
                     try {
                       await FirebaseAuth.instance.sendPasswordResetEmail(email: emailController.text.trim());
-                      if (!context.mounted) return; // Add mounted check
+                      if (!context.mounted) {
+                        return;
+                      }
                       Navigator.of(context).pop();
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Password reset link sent! Check your email.')),
                       );
                     } on FirebaseAuthException catch (e) {
-                      if (!context.mounted) return; // Add mounted check
+                      if (!context.mounted) {
+                        return;
+                      }
                       Navigator.of(context).pop();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('Error: ${e.message}')),
                       );
                     } catch (e) {
-                      if (!context.mounted) return; // Add mounted check
+                      if (!context.mounted) {
+                        return;
+                      }
                       Navigator.of(context).pop();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('An unexpected error occurred: ${e.toString()}')),

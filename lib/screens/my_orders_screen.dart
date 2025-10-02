@@ -98,7 +98,9 @@ class MyOrdersScreen extends StatelessWidget {
                           },
                           onCancelOrder: () async {
                             await firestoreService.cancelOrder(order.id);
-                            if (!context.mounted) return;
+                            if (!context.mounted) {
+                              return;
+                            }
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('Order ${order.id} cancelled.')),
                             );
