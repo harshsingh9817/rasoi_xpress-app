@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "344874952353",
+    "project_id": "rasoi-express-bd581",
+    "storage_bucket": "rasoi-express-bd581.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344874952353:android:32726d1215b24048b872e0",
+        "android_client_info": {
+          "package_name": "com.example.rasoi_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344874952353-kpqtvcj8bjc482k5e75tv2iu62251tfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMYbGwanqOL1k5WFM7PVAygNI9izVgSRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344874952353-kpqtvcj8bjc482k5e75tv2iu62251tfj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "344874952353-48s7p03pmievdnup7v49f4nvtqierp72.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.rasoiApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
